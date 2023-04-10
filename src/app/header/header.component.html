@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img [src]="img" width="100" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a  aria-current="page" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="me-2  mx-2" routerLink="product" >product</a>
+            <li class="nav-item">
+              <a class="me-2  mx-2" routerLink="user" >user</a>
+              <li class="nav-item">
+                <a class="me-2  mx-2" routerLink="post" >post</a>
+        </ul>
+       
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="social-media">
+            <i class="fab mx-2 fa-instagram"></i>
+            <i class="fab mx-2 fa-spotify"></i>
+            <i class="fab mx-2 fa-facebook"></i>
+            <i class="fab mx-2  fa-soundcloud"></i>
+        </div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a  aria-current="page" routerLink="Login" >Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="me-2  mx-2"  routerLink="register">Register</a>
+             
+          </ul>
+      </div>
+    </div>
+  </nav>

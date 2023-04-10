@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="row" >
+        
+        <div class="card mb-4 mx-2" style="width: 20rem;" *ngFor="let Product of kero">
+            <div class="card-body">
+                <h3 class="card-title text-black">{{"user id  "+ Product.id}}</h3>
+              <h5 class="card-title text-black">{{"title "+ Product.title}}</h5>
+              <p class="card-text  text-black"> {{"body "+ Product.body}}</p>
+              <a  [routerLink]='[Product.id,"comment"]' class="btn btn-primary">get comment</a>
+            </div>
+          </div>
+    </div>

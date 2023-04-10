@@ -1,0 +1,23 @@
+<div class="w-75 m-auto py-5">
+   
+    <form [formGroup]="loginform" >
+        <div class="form-group" >
+        <label for="userName">User Name</label>
+          <input formControlName="userName" class="form-control" type="text" id="userName">
+      <div class="alert my-2 alert-danger" *ngIf="loginform.get('userName')?.errors!=null &&loginform.get('userName')?.touched">
+    <p *ngIf="loginform.get('userName')?.errors?.['required']">userName is Required</p>
+      </div>
+        </div>
+
+       
+            <div class="form-group">
+                <label for="password">password</label>
+                   <input formControlName="password" class="form-control" type="password" id="password">
+              <div class="alert my-2 mb-2 alert-danger" *ngIf="loginform.get('password')?.errors!=null &&loginform.get('password')?.touched">
+            <p *ngIf="loginform.get('password')?.errors?.['required']">password is Required</p>
+              </div>
+                </div>
+                <button class="btn btn-info mt-2" [disabled]="loginform.invalid" type="submit">Login</button>
+    </form>
+
+</div>

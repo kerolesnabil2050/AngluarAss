@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="row" >
+        
+        <div class="card mb-4 mx-2" style="width: 20rem;" *ngFor="let person of user">
+            <div class="card-body">
+                <h3 class="card-title text-black">{{person.name}}</h3>
+              <h5 class="card-title text-black">{{person.username}}</h5>
+              <p class="card-text  text-black"> {{person.email}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>

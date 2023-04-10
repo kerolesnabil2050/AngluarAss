@@ -1,0 +1,37 @@
+
+<h1>{{StoreName|uppercase}}</h1>
+<img [src]="StoreLogo" height="200" width="200">
+<h3 *ngIf="Discount=='No Discount';else price" >No discount</h3>
+<ng-template #price>
+    <h3 >We offer an explicit discount of:{{Discount}}</h3>
+</ng-template>
+
+<div>
+    <label>Category</label>
+    <br>
+    <select>
+        <option *ngFor ="let cat of CategoryList">
+            {{cat.Name}}
+        </option>
+    </select>
+</div>
+
+<br>
+ 
+  <div class="container-fluid">
+    <div class="row" >
+        
+        <div class="card mb-4 mx-2" style="width: 20rem;" *ngFor="let Product of ProtectList">
+            <img [src]="Product.Img" class="card-img-top" height="100" >
+            <div class="card-body">
+              <h5 class="card-title text-black">{{"name "+ Product.Name}}</h5>
+              <p class="card-text  text-black"> {{"price "+ Product.Price}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+</div> 
+  <br>
+  <label >Enter your Name</label>
+  <input type="text"  [(ngModel)]="ClientName" class="form-control">
+  <h2>{{ClientName}}</h2>  

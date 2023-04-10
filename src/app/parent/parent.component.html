@@ -1,0 +1,14 @@
+<app-child (childEvent)="messagefromChild=$event"></app-child>
+<div class="container-fluid">
+    <div class="row" >
+        
+        <div class="card mb-4 mx-2" style="width: 20rem;" *ngFor="let Product of messagefromChild">
+            <img [src]="Product.Img" class="card-img-top" height="100" >
+            <div class="card-body">
+              <h5 class="card-title text-black">{{"name "+ Product.Name}}</h5>
+              <p class="card-text  text-black"> {{"price "+ Product.Price}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </div>
+</div> 
